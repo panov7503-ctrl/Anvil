@@ -11,10 +11,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.example.AutoAnvilMacro"
+      "com.example.autoanvil.AutoAnvilMacro"
     ],
     "client": [
-      "com.example.AutoAnvilMacro"
+      "com.example.autoanvil.AutoAnvilMacro"
     ]
   },
   "mixins": [],
