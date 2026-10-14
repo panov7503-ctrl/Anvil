@@ -1,6 +1,7 @@
 package com.example.autoanvil;
 
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.option.KeyBinding;
@@ -10,14 +11,20 @@ import net.minecraft.screen.slot.SlotActionType;
 import net.minecraft.text.Text;
 import org.lwjgl.glfw.GLFW;
 
-public class AutoAnvilMacro implements ClientModInitializer {
+public class AutoAnvilMacro implements ModInitializer, ClientModInitializer {
 
     private static KeyBinding toggleKey;
     private static boolean isActive = false;
     private static int tickCounter = 0;
 
     @Override
+    public void onInitialize() {
+        // Основной инициализатор (выполняется при запуске игры)
+    }
+
+    @Override
     public void onInitializeClient() {
+        // Клиентский инициализатор
         toggleKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.autoanvil.toggle",
                 InputUtil.Type.KEYSYM,
