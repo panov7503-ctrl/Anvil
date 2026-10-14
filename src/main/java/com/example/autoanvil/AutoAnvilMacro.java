@@ -18,10 +18,10 @@ public class AutoAnvilMacro implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        // Регистрируем клавишу R
+        // Регистрируем клавишу R с правильным типом KEYCODE для 1.21.4
         toggleKey = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 "key.autoanvil.toggle",
-                InputUtil.Type.KEY_SYM,
+                InputUtil.Type.KEYCODE,
                 GLFW.GLFW_KEY_R,
                 "category.autoanvil.general"
         ));
