@@ -1,22 +1,27 @@
 {
   "schemaVersion": 1,
   "id": "autoanvil",
-  "version": "1.0.0",
-  "name": "Auto Anvil Macro",
-  "description": "Macro for combining potions.",
-  "authors": ["Me"],
+  "version": "${version}",
+  "name": "Auto Anvil",
+  "description": "Auto Anvil Macro",
+  "authors": [],
   "contact": {},
   "license": "CC0-1.0",
   "icon": "assets/autoanvil/icon.png",
-  "environment": "client",
+  "environment": "*",
   "entrypoints": {
+    "main": [
+      "com.example.AutoAnvilMacro"
+    ],
     "client": [
-      "com.example.autoanvil.AutoAnvilMacro"
+      "com.example.AutoAnvilMacro"
     ]
   },
+  "mixins": [],
   "depends": {
-    "fabricloader": ">=0.15.0",
-    "minecraft": "~1.21.1",
-    "java": ">=21"
+    "fabricloader": ">=0.16.5",
+    "minecraft": "*",
+    "java": ">=21",
+    "fabric-api": "*"
   }
 }
